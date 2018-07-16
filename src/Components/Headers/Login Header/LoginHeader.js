@@ -5,9 +5,13 @@ import search from './icons/search.svg';
 
 
 
+
 export default class LoginHeader extends Component{
     constructor(){
         super()
+        this.state={
+            
+        }
 
     }
 
@@ -22,14 +26,6 @@ export default class LoginHeader extends Component{
                     Search rumblt
                     </div>
                     </div>
-                    <div className="buttons">
-                <div className="signup">
-                Sign Up
-                </div>
-                <div className="login">
-                Log in
-                </div>
-                </div>
                 </div>
                
             </div>
