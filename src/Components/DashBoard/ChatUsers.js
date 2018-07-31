@@ -16,14 +16,14 @@ componentDidMount(){
     let followersArr = [];
     axios.get(`/api/followers/${this.props.authUser.uid}`).then(res=>{
         let followerIDArray = res.data;
-        followerIDArray.map(el =>{
+        followerIDArray.map(el =>
             axios.get(`/api/users/${el.followeduserid}`).then((res) => {
                 let follower = res.data[0];
                 followersArr.push(follower);
             }).then(() => {
                 this.setState({users: followersArr})
             })
-        })
+        )
     })
 }
 
@@ -35,7 +35,7 @@ componentDidMount(){
         return(
             <div>
                 {this.state.users.map(user=>{
-                    let followuserid = user.userid;
+                    // let followuserid = user.userid;
                     return(
                         <div id='cu' key={user.id} onClick={() => {window.location.href=`http://localhost:3000/#/profile/${user.userid}`}}>
                             <div id="culeft">

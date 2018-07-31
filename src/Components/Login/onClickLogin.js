@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { auth } from  '../../firebase';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 
 const SignInPage = ({ history }) =>
@@ -33,18 +33,14 @@ class SignInForm extends Component {
       password,
     } = this.state;
 
-    const {
-      history,
-    } = this.props;
+    // const {
+    //   history,
+    // } = this.props;
 
     auth.doSignInWithEmailAndPassword(email, password)
       .then((u) => {
         this.setState(() => ({ ...INITIAL_STATE }));
-       if(u.user.uid){
-        window.location.href = "/#/dashboard"
-       } else {
-         null
-       }
+       if(u.user.uid){window.location.href = "/#/dashboard"} 
       })
       .catch(error => {
         this.setState(updateByPropertyName('error', error));

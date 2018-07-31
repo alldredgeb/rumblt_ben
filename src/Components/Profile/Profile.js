@@ -1,22 +1,23 @@
 // eslint-disable-next-line
 
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {getUserFollowers} from '../../reducers/following';
 import MainHeader from './../Headers/Main Header/MainHeader';
-import love from './icons/love.svg';
-import notloved from './icons/notloved.svg';
+// import love from './icons/love.svg';
+// import notloved from './icons/notloved.svg';
 import default_profile_img from './temp_images/default_profile_pic.png';
 import './Profile.css';
-import ProfileFeed from './ProfileFeed';
-import PFTwo from './PFTwo';
+// import ProfileFeed from './ProfileFeed';
+// import PFTwo from './PFTwo';
+import utils from './../../utils/profileFunctions';
 
-var imgStyle = {
-  width: 25,
-  height: 25
-}
+// var imgStyle = {
+//   width: 25,
+//   height: 25
+// }
 
 
 export class Profile extends Component{
@@ -71,7 +72,8 @@ componentWillUnmount(){
 
 
 retriveProfileData () {
-  axios.get(`/api/users/${this.props.match.params.userid}`).then((res) => {
+  // utils.retriveProfileData(`/api/users/${this.props.match.params.userid}`).then()
+  utils.retriveProfileData(`/api/users/${this.props.match.params.userid}`).then((res) => {
     console.log('profile component - retriveProfileData', res.data[0]);
     this.setState({
       profile_pic: res.data[0].userimg,
@@ -158,7 +160,7 @@ handlePostUnlikeOnClick(userid, postid) {
 
 numberWithCommas(){
   const num = Math.floor(Math.random()*10000);
-  var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return num;
 }
 
@@ -215,9 +217,9 @@ render(){
             <div className='profile_trending_nav ppn' onClick={this.handleChangeToLikes}>Likes</div>
             {
             this.state.followedByAuthUser ?
-            <div className="ppn" onClick={()=> {this.unfollow(), this.setState({followedByAuthUser: false})}}>Unfollow</div>
+            <div className="ppn" onClick={()=> {this.unfollow(); this.setState({followedByAuthUser: false})}}>Unfollow</div>
             :
-            <div className="ppn"  onClick={()=> {this.follow(), this.setState({followedByAuthUser: true})}}>Follow</div>
+            <div className="ppn"  onClick={()=> {this.follow(); this.setState({followedByAuthUser: true})}}>Follow</div>
             }
           </div>
           

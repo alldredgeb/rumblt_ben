@@ -26,15 +26,15 @@ export class UserInfo extends React.Component {
         this.setState({id: this.props.authUser.uid })
 
         axios.get(`/api/users/${this.props.authUser.uid}`).then((res) => {
-            let {userimg, username, blogtitle} = res.data[0];
-            this.setState({img: userimg, username: username, blogtitle: blogtitle})
-            this.getFollowingCount();
+          let {userimg, username, blogtitle} = res.data[0];
+          this.setState({img: userimg, username: username, blogtitle: blogtitle})
+          this.getFollowingCount();
         })
     }
 
     getFollowingCount () {
         axios.get(`/api/followingCount/${this.props.authUser.uid}`).then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({followingCount: res.data[0]});
         })
     }
@@ -46,8 +46,8 @@ export class UserInfo extends React.Component {
     }
 
     render () {
-        console.log(this.state)
-        console.log(this.props)
+        // console.log(this.state)
+        // console.log(this.props)
     return(
         <div id='ui'>
             <div className="uitop">

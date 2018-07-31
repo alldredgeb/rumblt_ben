@@ -10,7 +10,7 @@ import RandomPost from './RandomPost';
 // import {compose} from 'recompose';
 // import withAuthentication from '../../withAuthentication';
 // import withAuthorization from '../../withAuthorization';
-import SignOutButton from '../Login/signOut';
+// import SignOutButton from '../Login/signOut';
 import InsertText from './Icons/InsertText'
 import InsertQuote from './Icons/InsertQuote'
 import InsertPhoto from './Icons/InsertPhoto'
@@ -44,7 +44,7 @@ export class Dashboard extends Component{
         axios.get('/api/posts/').then((posts)=> {
             this.setState({posts:posts.data})
         })
-        console.log(this.props);
+        // console.log(this.props);
     }
 
    toggleClose(){
@@ -57,7 +57,7 @@ export class Dashboard extends Component{
             window.location.href = '/#/';
         } else {
             axios.get(`/api/users/${this.props.authUser.uid}`).then((user) => {
-                console.log('current user: ', user);
+                // console.log('current user: ', user);
                 this.setState({currentuser:user.data[0]})
             })
         }
@@ -73,7 +73,7 @@ export class Dashboard extends Component{
     }
 
     componentDidMount(){
-        console.log('Auth User', this.props.authUser);
+        // console.log('Auth User', this.props.authUser);
         document.body.background = '#36465d';
         this.setState({isDashCurrent: true})
 

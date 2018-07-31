@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {
-  Link
-} from 'react-router-dom';
+// import {
+//   Link
+// } from 'react-router-dom';
 import { auth, db } from '../../firebase';
 import axios from 'axios';
 
@@ -47,9 +47,9 @@ class SignUpForm extends Component {
       passwordOne,
     } = this.state;
 
-    const {
-      history,
-    } = this.props;
+    // const {
+    //   history,
+    // } = this.props;
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {

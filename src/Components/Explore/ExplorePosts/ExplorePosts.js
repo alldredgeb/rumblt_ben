@@ -25,7 +25,7 @@ componentDidMount(){
 getUserLikes() {
     let userid = this.props.authUser.uid;
     axios.get('/api/userLikes/' + userid).then((likesResponse) => {
-        likesResponse.data.map((el, i) => {
+        likesResponse.data.map( el => {
             if (el.userid == userid && el.postid == this.props.id) {
                 this.setState({liked: true})
             }
@@ -55,7 +55,7 @@ like(){
 
 numberWithCommas(){
     const num = Math.floor(Math.random()*10000);
-    var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     this.setState({likenum: num})
 }
 

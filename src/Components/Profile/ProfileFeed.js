@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import love from './icons/love.svg';
-import notloved from './icons/notloved.svg';
+// import love from './icons/love.svg';
+// import notloved from './icons/notloved.svg';
 
-var imgStyle = {
-    width: 25,
-    height: 25
-  }
+// var imgStyle = {
+//     width: 25,
+//     height: 25
+//   }
 
 export default class ProfileFeed extends Component{
     constructor(props){
@@ -24,7 +24,7 @@ componentDidMount(){
 
 numberWithCommas(){
     const num = Math.floor(Math.random()*10000);
-    var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    // var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     this.setState({likenum: num})
 }
 

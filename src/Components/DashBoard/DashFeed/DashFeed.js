@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import './Dashfeed.css'
-import AddLike from '../Icons/AddLike';
+// import AddLike from '../Icons/AddLike';
 import  {connect} from 'react-redux';
 import axios from 'axios';
 
@@ -57,12 +57,12 @@ import axios from 'axios';
 
     numberWithCommas(){
         const num = Math.floor(Math.random()*10000);
-        var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        // var commaNum = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         this.setState({likenum: num})
     }
 
     render(){
-        console.log('props cont',this.props)
+        // console.log('props cont',this.props)
         return(
            
             <div id='maindashfeed'>

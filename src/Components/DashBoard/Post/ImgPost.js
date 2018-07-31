@@ -66,7 +66,7 @@ export class ImgPost extends Component {
                 placeholder='add some tags!'
                 />
              <div className="buttonwrapper">
-                <button onClick={()=>{this.sendText(), this.props.toggleClose()}} >Post</button>
+                <button onClick={()=>{this.sendText(); this.props.toggleClose()}} >Post</button>
                 <button onClick={()=>this.props.toggleClose()}>Close</button>
                 </div>
 

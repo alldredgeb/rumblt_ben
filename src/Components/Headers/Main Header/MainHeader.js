@@ -14,7 +14,7 @@ import aChat from './icons/aChat.svg'
 import aProfile from './icons/aProfile.svg'
 import UserInfo from './Sub Components/UserInfo/UserInfo';
 import axios from 'axios';
-import ChatWindow from './Sub Components/Chat Window/ChatWindow';
+// import ChatWindow from './Sub Components/Chat Window/ChatWindow';
 import ChatModal from './Sub Components/ChatModal/ChatModal';
 
 

@@ -4,7 +4,7 @@ const initial_state = {
     userFollowers: []
 }
 
-const INIT_FOLLOW = 'INIT_FOLLOW';
+// const INIT_FOLLOW = 'INIT_FOLLOW';
 const GET_FOLLOWERS = 'GET_FOLLOWERS';
 
 export function getUserFollowers(userid) {

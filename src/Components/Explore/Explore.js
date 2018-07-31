@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import MainHeader from './../Headers/Main Header/MainHeader';
-import reply from './icons/reply.svg';
-import reblog from './icons/reblog.svg';
-import love from './icons/love.svg';
+// import reply from './icons/reply.svg';
+// import reblog from './icons/reblog.svg';
+// import love from './icons/love.svg';
 import profile_img from './temp_images/1.jpg';
 import post_img from './temp_images/1q.jpg';
 import './Explore.css';
