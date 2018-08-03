@@ -102,7 +102,7 @@ export class MainHeader extends Component{
                     </Link>
 
                     <Link to='/explore'>
-                        <img id='iconh' src={this.props.isExploreCurrent? aExplore : compass}   alt=""/>
+                        <img id='iconh' className="explore_nav" src={this.props.isExploreCurrent? aExplore : compass}   alt=""/>
                     </Link>
 
                     <img id='iconh' src={this.state.chatActive ? aChat : message} alt="" onClick={()=>
